@@ -1,0 +1,27 @@
+@import "~antd/dist/antd.min.css";
+@import "~react-simple-keyboard/build/css/index.css";
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #cbcbcb;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(141, 141, 141);
+}

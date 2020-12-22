@@ -1,0 +1,33 @@
+{
+  "New Component": {
+    "scope": "typescriptreact",
+    "prefix": "new-component-styled",
+    "body": [
+      "import React from 'react';",
+      "import styled from 'styled-components';",
+      "",
+      "const _${1:Component} = styled.div`",
+
+      "`;",
+      "",
+      "interface I${1:Component}Props {",
+      "",
+      "}",
+      "",
+      "export const ${1:Component} = (props: React.PropsWithChildren<I${1:Component}Props>) => {",
+      "\tconst { } = props;",
+      "",
+      "\tReact.useEffect(() => {",
+      "\t\t//** effect here */",
+      "\t});",
+      "",
+      "\treturn (",
+      "\t\t<_${1:Component}>",
+      "\t\t\t{props.children}",
+      "\t\t</_${1:Component}>",
+      "\t);",
+      "};"
+    ],
+    "description": "New Component"
+  }
+}

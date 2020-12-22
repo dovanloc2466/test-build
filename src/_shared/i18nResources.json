@@ -1,0 +1,9 @@
+{
+  "en" : {
+    "hello": "hello"
+  },
+  "vi" : {
+    "hello": "Ê!",
+    "created at": "Thời gian tạo"
+  }
+}

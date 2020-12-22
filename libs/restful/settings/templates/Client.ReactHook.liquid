@@ -1,0 +1,33 @@
+
+    use{{ operation.MethodAccessModifier }}{{ operation.MethodAccessModifier }}{{ operation.ActualOperationNameUpper }}(): [(p: {{ Class }}{{operation.ActualOperationNameUpper}}Params) => void, boolean, {{ operation.ResultType }} | undefined, ApiException | undefined, () => void]{
+        const [result, setResult] = React.useState<{{ operation.ResultType }} | undefined>();
+        const [loading, setLoading] = React.useState(false);
+        const [error, setError] = React.useState<ApiException | undefined>();
+        const [isCancel, setIsCanel] = React.useState(false);
+
+        const request = (params: {{ Class }}{{operation.ActualOperationNameUpper}}Params) => {
+          setLoading(true);
+          this.{{ operation.ActualOperationName }}(params)
+            .then((_response) => {
+              if (isCancel) {
+                return;
+              }
+              setResult(_response)
+            })
+            .catch(error => {
+              if (isCancel) {
+                return;
+              }
+              setError(error);
+            }).finally(() => {
+              if (isCancel) {
+                return;
+              }
+              setLoading(false);
+            });
+        }
+      
+        const cancel = () => setIsCanel(true)
+      
+        return [request, loading, result, error, cancel];
+    }

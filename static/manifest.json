@@ -1,0 +1,10 @@
+{
+  "short_name": "Your app name here",
+  "name": "Your app name here",
+  "icons": [],
+  "start_url": "/",
+  "orientation": "portrait",
+  "display": "fullscreen",
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF"
+}
