@@ -8,7 +8,7 @@ module.exports = {
   port: defaultPort,
   devTool: 'eval-source-map',
   defines: {
-    API_URL: 'https://api.easysalon.vn',
+    API_URL: 'https://api-dev.easysalon.vn',
     JTW_COOKIE_KEY: '_dev_tk',
     SUB_ENV: 'dev'
   },

@@ -3,7 +3,7 @@ module.exports = {
   definitions: {
     JTW_COOKIE_KEY: '_dev_tk',
     SUB_ENV: "production",
-    API_URL: "https://api.easysalon.vn",
+    API_URL: "https://api-dev.easysalon.vn",
   },
   sourceMap: true,
   htmlOptions: {

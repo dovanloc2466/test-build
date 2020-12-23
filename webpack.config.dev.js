@@ -2,7 +2,7 @@
 
 const defaultHost = '0.0.0.0';
 const defaultPort = 3000;
-const apiURL = 'https://api.easysalon.vn';
+const apiURL = 'https://api-dev.easysalon.vn';
 
 module.exports = {
   entry: './index',

@@ -113,6 +113,9 @@ const _InvoiceItemForm = styled.div`
 
 interface IInvoiceItemFormProps {
 }
+interface Data extends BookingItem {
+  discount: number;
+}
 
 export const InvoiceItemForm = (props: React.PropsWithChildren<IInvoiceItemFormProps>) => {
   const { } = props;
@@ -128,11 +131,11 @@ export const InvoiceItemForm = (props: React.PropsWithChildren<IInvoiceItemFormP
 
   const [listBookingState, setListBookingState] = useRecoilState(listBooking);
 
-  const [data, setData] = React.useState({
+  const [data, setData] = React.useState<Data>({
     discountUnit: 'MONEY',
     discount: 0,
     ...invoiceItemState
-  });
+  } as Data);
 
   const commonOptions = {
     layout: {
@@ -198,6 +201,11 @@ export const InvoiceItemForm = (props: React.PropsWithChildren<IInvoiceItemFormP
 
     return history.push('/casher');
   };
+
+  if (!invoiceItemState) {
+    return null;
+  }
+
   return (
     <_InvoiceItemForm>
       <Row gutter={50}>
